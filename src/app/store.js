@@ -1,7 +1,9 @@
 import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
-
+import useReducer from "../features/user/userSlice";
 export default configureStore({
-    reducer: {},
+    reducer: {
+        user: useReducer,
+    },
     middleware: (getDefaultMiddleware) => {
         return getDefaultMiddleware({
             serializableCheck: false,
